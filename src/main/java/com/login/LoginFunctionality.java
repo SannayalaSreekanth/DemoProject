@@ -3,7 +3,7 @@ package com.login;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public final class LoginFunctionality {
+ final class LoginFunctionality {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
