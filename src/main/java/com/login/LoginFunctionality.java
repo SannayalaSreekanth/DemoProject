@@ -16,7 +16,7 @@ package com.login;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-//login to gmail app 
+//login to gmail app  
  public final class LoginFunctionality {
      private void FilePathHelper() {
          final String path = System.getProperty("user.dir") + "\\chromedriver.exe";
