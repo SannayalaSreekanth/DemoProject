@@ -20,14 +20,14 @@ import java.util.logging.Logger;
 //login to gmail app
  public final class LoginFunctionality {
      public static void main(String[] args) {
+          Logger log = Logger.getLogger("InfoLogging");
          final String path = System.getProperty("user.dir") + "\\chromedriver.exe";
          System.setProperty("webdriver.chrome.driver", path);
          WebDriver driver = new ChromeDriver();
          driver.manage().window().maximize();
          driver.get("https://accounts.google.com/");
-         System.out.println("lanched the gmail");
-        // Logger.getLogger("Logged into Gmail");
-
+         //System.out.println("lanched the gmail");
+         log.info("successfully logged into gmail");
      }
 //     static void main(String[] args) {
 //        String path = System.getProperty("user.dir") + "\\chromedriver.exe";
