@@ -1,7 +1,5 @@
-name: login
-
-on: push
-
+name: learn-github-actions
+on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
