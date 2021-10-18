@@ -15,15 +15,19 @@ package com.login;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.logging.Logger;
 
-//login to gmail app  
+//login to gmail app
  public final class LoginFunctionality {
-     private void FilePathHelper() {
+     public static void main(String[] args) {
          final String path = System.getProperty("user.dir") + "\\chromedriver.exe";
          System.setProperty("webdriver.chrome.driver", path);
          WebDriver driver = new ChromeDriver();
          driver.manage().window().maximize();
          driver.get("https://accounts.google.com/");
+         System.out.println("lanched the gmail");
+        // Logger.getLogger("Logged into Gmail");
+
      }
 //     static void main(String[] args) {
 //        String path = System.getProperty("user.dir") + "\\chromedriver.exe";
