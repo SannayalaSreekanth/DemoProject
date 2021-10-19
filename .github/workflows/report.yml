@@ -31,6 +31,6 @@ jobs:
           uses: peaceiris/actions-gh-pages@v3
           with:
             github-token: ${{secrets.GITHUB-TOKEN}}
-            publish-dir: ./target/surefire-reports/testng_metrics.html
+            publish-dir: ./public
           
           
