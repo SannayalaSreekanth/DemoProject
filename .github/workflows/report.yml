@@ -30,7 +30,9 @@ jobs:
         - name: Deploy report page to Github page
           uses: peaceiris/actions-gh-pages@v3
           with:
-            github-token: ${{ secrets.GITHUB-TOKEN }}
-            publish-dir: ./target/surefire-reports/testng_metrics.html
+            deploy_key: ${{secrets.DEPLOY_PRIVATE_KEY}} 
+            publish_branch: gh-pages
+            publish_dir: ./public
+            
           
           
