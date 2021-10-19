@@ -25,4 +25,14 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Merge test reports
+      run: npm run combine :report
+    - name: Generate HTML report
+      run: npm run generate :report
+    - name: Deploy report page to Github page
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+            github-token: ${{secrets.GITHUB-TOKEN}}
+            publish-dir: ./public  
    
