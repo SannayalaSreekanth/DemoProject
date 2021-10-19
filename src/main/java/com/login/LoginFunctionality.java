@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  public final class LoginFunctionality {
      public  void login() {
           Logger log = Logger.getLogger("InfoLogging");
-           String path = System.getProperty("user.dir") + "/chromedriver (1).exe";
+           String path = System.getProperty("user.dir") + "/src/main/resources/Drivers/Linux/chromedriver";
          //System.out.println(System.getProperty("user.dir"));
          System.out.println(path);
          System.setProperty("webdriver.chrome.driver", path);
