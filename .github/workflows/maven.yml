@@ -10,7 +10,11 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+ cypress-test:
+    name: Run on chrome 94
+    runs-on: ubuntu-18.04
+    container: cypress/browsers:node16.5.0-chrome94-ff93  
+ build:
 
     runs-on: ubuntu-latest
 
