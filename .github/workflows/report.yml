@@ -11,10 +11,6 @@ on:
     
 jobs:
   cypress-test:
-    name: Run on chrome 94
-    runs-on: ubuntu-18.04
-    container: cypress/browsers:node16.5.0-chrome94-ff93  
-      
    
     steps:
         - uses: actions/checkout@v2
@@ -30,10 +26,7 @@ jobs:
         - name: Build with Maven
           run: mvn -B package --file pom.xml
        
-        - name: Merge test reports
-          run: npm run combine :report
-        - name: Generate HTML report
-          run: npm run generate :report
+     
         - name: Deploy report page to Github page
           uses: peaceiris/actions-gh-pages@v3
           with:
