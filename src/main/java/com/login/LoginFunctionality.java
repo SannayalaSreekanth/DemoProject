@@ -13,6 +13,7 @@ package com.login; /**
  */
 //import org.openqa.selenium.By;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,10 +25,11 @@ import java.util.logging.Logger;
  public final class LoginFunctionality {
      public  void login() {
           Logger log = Logger.getLogger("InfoLogging");
-           String path = System.getProperty("user.dir") + "/src/main/resources/Drivers/Linux/chromedriver";
+         //  String path = System.getProperty("user.dir") + "/src/main/resources/Drivers/Linux/chromedriver";
          //System.out.println(System.getProperty("user.dir"));
-         System.out.println(path);
-         System.setProperty("webdriver.chrome.driver", path);
+        // System.out.println(path);
+         //System.setProperty("webdriver.chrome.driver", path);
+         WebDriverManager.chromedriver().setup();
          ChromeOptions options = new ChromeOptions();options. addArguments("--headless");
          WebDriver driver = new ChromeDriver(options);
          //WebDriver driver = new ChromeDriver();
