@@ -30,7 +30,9 @@ jobs:
         - name: Deploy report page to Github page
           uses: peaceiris/actions-gh-pages@v3
           with:
-            deploy_key: ${{secrets.DEPLOY_PRIVATE_KEY}}            
-            publish-dir: ./public
+            deploy_key: ${{secrets.DEPLOY_PRIVATE_KEY}} 
+            publish_branch: gh-pages
+            publish-dir: ./test-output/testng_metrics.html
+            
           
           
