@@ -15,6 +15,7 @@ package com.login; /**
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import java.util.logging.Logger;
@@ -27,7 +28,9 @@ import java.util.logging.Logger;
          //System.out.println(System.getProperty("user.dir"));
          System.out.println(path);
          System.setProperty("webdriver.chrome.driver", path);
-         WebDriver driver = new ChromeDriver();
+         ChromeOptions options = new ChromeOptions();options. addArguments("--headless");
+         WebDriver driver = new ChromeDriver(options);
+         //WebDriver driver = new ChromeDriver();
          driver.manage().window().maximize();
          driver.get("https://accounts.google.com/");
          //System.out.println("lanched the gmail");
