@@ -10,11 +10,17 @@ on:
     branches: [ master ]
     
 jobs:
+
+  
   cypress-test:
     name: Run on chrome 94
     runs-on: ubuntu-18.04
-    container: cypress/browsers:node16.5.0-chrome94-ff93    
-    steps:
+    container: cypress/browsers:node16.5.0-chrome94-ff93  
+    
+  build:  
+   runs-on: ubuntu-latest
+   
+   steps:
         - uses: actions/checkout@v2
         - name: Set up JDK 11
           uses: actions/setup-java@v2
