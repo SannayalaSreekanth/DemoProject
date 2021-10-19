@@ -5,9 +5,9 @@ name: generate HTML report
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ develop ]
     
 jobs:
   cypress-test:
