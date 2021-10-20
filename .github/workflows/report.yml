@@ -10,7 +10,7 @@ on:
     branches: [ develop ]
     
 jobs:
-  cypress-test:
+  build-test:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
@@ -32,7 +32,7 @@ jobs:
           with:
             deploy_key: ${{secrets.DEPLOY_PRIVATE_KEY}} 
             publish_branch: gh-pages
-            publish_dir: ./target/surefire-reports
+            publish_dir: ./target/surefire-reports/testng_metrics.html
             
           
           
