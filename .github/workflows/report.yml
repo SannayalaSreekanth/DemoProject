@@ -32,7 +32,7 @@ jobs:
           with:
             deploy_key: ${{secrets.DEPLOY_PRIVATE_KEY}} 
             publish_branch: gh-pages
-            publish_dir: ./public
+            publish_dir: ./target/surefire-reports
             
           
           
